@@ -17,20 +17,20 @@ function compteurColor() {
   }
 }
 
+function updateCounter() {
+  compteurColor();
+  compteur.textContent = counter;
+}
+
 incre.addEventListener('click', function () {
   counter++;
-  compteurColor();
-  compteur.textContent = counter;
+  updateCounter();
 });
-
 decre.addEventListener('click', function () {
   counter--;
-  compteurColor();
-  compteur.textContent = counter;
+  updateCounter();
 });
-
 reset.addEventListener('click', function () {
   counter = 0;
-  compteurColor();
-  compteur.textContent = counter;
+  updateCounter();
 });
